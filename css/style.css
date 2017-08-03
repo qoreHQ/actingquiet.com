@@ -3,6 +3,7 @@
 p, span, h1, h2, h3, h4, h5, h6, li, nav {
 	-webkit-font-smoothing: antialiased;
 	text-rendering: optimizelegibility;
+	color: white;
 }
 
 
@@ -11,7 +12,7 @@ p, span, h1, h2, h3, h4, h5, h6, li, nav {
 		width: 100%;
 	}
 	body {
-		background-color: rgb(225, 225, 225);
+		background-color: #30292f;
 		width: 100%; /* wp width */ 
 		margin: 0 auto 0 auto;
 		padding-top: 15px;
@@ -29,13 +30,15 @@ p, span, h1, h2, h3, h4, h5, h6, li, nav {
 	
 	
 	
+	
+	
 	header {
 		position: fixed;
 		top: 0;
 		left: 0;
 		width: 100%;
 		
-		background-color: rgba(0, 0, 0, .7);
+		background-color: rgba(89, 36, 83, .7);
 		color: white;
 	}
 	
@@ -89,7 +92,7 @@ p, span, h1, h2, h3, h4, h5, h6, li, nav {
 		text-align: center;	
 		font-weight: normal;
 		letter-spacing: 0.05em;
-		color: #694865;
+		color: #bdeef0;
 	}
 	
 	
@@ -154,11 +157,11 @@ p, span, h1, h2, h3, h4, h5, h6, li, nav {
 		font-family: "Orator Std";
 		text-decoration: none;
 		font-size: 1.2em;
-		opacity: .8;
+		opacity: 1;
 		cursor: pointer;
 	}
 	.buyLinks a:hover {
-		opacity: 1;
+		opacity: .8;
 		cursor: pointer;
 	}
 /*////////*/
