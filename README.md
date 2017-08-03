@@ -1,1 +1,15 @@
-actingquiet.com
+![qore logo](https://qore.no/res/logo-text-100.png)
+
+# Webpage for Acting Quiet
+https://lucky.actingquiet.com
+
+## Credits
+
+jQuery
+http://jquery.com/
+
+jQuery Color
+https://github.com/jquery/jquery-color
+
+jQuery Cycle Plugin
+http://jquery.malsup.com/cycle/
