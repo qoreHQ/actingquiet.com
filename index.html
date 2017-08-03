@@ -3,94 +3,130 @@
 <head>
 	<meta charset="utf-8"/>
 	<title>Acting Quiet</title>
-	<link rel="stylesheet" type="text/css" href="css/lotusstyle.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	
+	<!-- Icons -->
+	<link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+	<link rel="mask-icon" href="img/logo.svg" color="red"> <!--Safari pin icon-->
+	<link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+	<link rel="manifest" href="manifest.json">
+	<!--<meta name="msapplication-TileColor" content="transparent">-->
+	<meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
 </head>
 <body>
 	<!-- Navigation top -->
-	<nav>
-		<span data_page="frontPage">home</span>
-		<span data_page="aboutPage">about</span>
-		/
-		<i><a target="_blank" href="https://twitter.com/actingquiet">twitter</a></i>
-		<i><a target="_blank" href="https://soundcloud.com/acting-quiet">soundcloud</a></i>
-	</nav>
+	<header>
+		<span id="headerTitle" style="display:none;">Acting quiet</span>
+		
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li>Discography</li>
+			<li><a href="about.html">About</a></li>
+			<li>Twitter</li>
+			<li>Soundcloud</li>
+		</ul>
+		
+		<?xml version="1.0" encoding="utf-8"?>
+		<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+		<svg version="1.1" id="header_arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="45px" height="8px" viewBox="0 0 27.019 5.348" xml:space="preserve" style="display:none;">
+			<polyline id="polyline" fill="none" stroke="#ffffff" points="1.586,1.64 13.516,3.667 25.445,1.64" stroke-width="3" stroke-linecap="round" stroke-miterlimit="10">
+				<animate id='openAnim' attributeName='points' dur='.5' repeatCount='1' begin='indefinite' from='1.586,1.64 13.516,3.667 25.445,1.64' to='1.586,3.667 13.516,1.64 25.445,3.667'/>
+				<animate id='closeAnim' attributeName='points' dur='.5' repeatCount='1' begin='indefinite' from='1.586,3.667 13.516,1.64 25.445,3.667' to='1.586,1.64 13.516,3.667 25.445,1.64'/>
+				
+			</polyline>
+		</svg>
+	</header>
+
+
 	<section id="frontPage" class="currentpage">
+		
+		
 		<!-- Header image -->
-		<img src="img/head.png" width="600px" height="372px">
-		<!-- Buy -->
-		<p class="buyLink">
-			Listen to the album: <br/>
-			<a target="_blank" href="#">itunes</a> 
-			<a target="_blank" href="#">spotify</a> 
-			<a target="_blank" href="http://wimp.no/album/26574501">wimp</a>
-			<a target="_blank" href="#">bandcamp</a>
-		</p>
-		<!-- Song list -->
-		<img id="coverStack" src="img/coverborder.png" width="300px" height="300px">
-		<ol id="songList">
-			<li>Ticking</li>
-			<li>Waste My Life Away <i>(feat. Ingvil &#216;vsteb&#248;)</i></li>
-			<li>Catherine</li>
-			<li>Careless</li>
-			<li>The Chosen One</li>
-			<li>Ashore</li>
-			<li>Mammon</li>
-			<li>Day Like This</li>
-			<li>Ticking <i>(Acoustic)</i></li>
-		</ol>
+		<img id="topimg" src="img/coverround.png" width="500px" height="500px">
+		
+		
+		<!--<img src="img/kaizenType.png" alt="Kaizen" id="largeType" width="500px" height="auto">-->
+		
+		<h1 id="largeType"><span>Kaize</span>n</h1>
+		<h3 id="subtitle">by Acting Quiet</h3>
+
+
+		<!-- Listen -->
+		<div class="buyLinks">
+			<a target="_blank" href="https://itunes.apple.com/no/album/lotus/id826631920?l=nb"><img src="img/applemusic1.png" alt="Apple Music" height="35px" width="auto"></a>
+			<a target="_blank" href="http://tidal.com/album/26574501"><img src="img/tidal1.png" alt="Tidal" height="35px" width="auto"></a> 
+			<a target="_blank" href="https://play.spotify.com/album/575ak8QI5BEqyIDKfKaRoN"><img src="img/spotify1.png" alt="Spotify" height="35px" width="auto"></a> 
+		</div>
+		
+		
+		<div id="infoText">
+			<h2>A two man band</h2>
+			<p>Acting Quiet, founded in 2010, is an indie band that consists of Johannes T. Røsvik and Mathias Waagnes, from the Art Nouveau city Aalesund in Norway. The smooth acoustic, often melancholic sounding tracks creates a lush and emotional soundscape.</p> 
+
+			<p>After the first self-released album “Lucky”, Acting Quiet decided to continue self-releasing albums independently. For the EP “Pascal”, the genre evolved from a purist acoustic music style to indie pop. Continuously evolving, Acting Quiet released “Lotus” that explores electronica oriented instruments as well as using a wide variety of orchestra in their tracks.</p>
+			
+		</div>
+		
+		<div id="albumInfo">
+			
+			<img src="img/coverstack.png" alt="" width="290px" height="auto">
+			
+			<ol>
+				<li>Synthesise</li>
+				<li>Retro</li>
+				<li>Wildfire</li>
+				<li>Life in a Day</li>
+				<li>One</li>
+				<li>True</li>
+				<li>Start</li>
+				<li>Last of Us</li>
+				<li>Captain Me</li>
+			</ol>
+			
+		</div>
+		
 	</section>
 
-	<section id="aboutPage" style="display:none;">
 
-		<!-- <p>We are a band in Aalesund, Norway, which play Pop, Rock, Acoustic,
-		Electronica inspired music. We focus on catchy guitars, thight drums and
-		full bodied piano tracks. We are passionate about our work and we think
-		that is reflected in the music.</p> -->
+	<footer>
 
-		<!-- Mathias -->
-		<div class="aboutbox" id="MBW" data-visible="false">
-			<div style="display:none;">
-				<p>Mathias is mainly a guitarist, pianist and vocalist, but he also does song writing. He is also the producer and makes sure everything is in order, when it is about making the songs right.</p>
-			</div>	
-		</div>
 
-		<!-- Johannes -->
-		<div class="aboutbox" id="JTR" data-visible="false">
-			<div style="display:none;">
-				<p>On bass, we have Johannes who is also our designer. He does about anything one may do with computers and has made the album art for all our music and has also made the website from scratch. </p>
-			</div>	
-		</div>
+	</footer>
 
-		<!-- Fredrik -->
-		<div class="aboutbox" id="FL" data-visible="false">
-			<div style="display:none;">
-				<p>Fredrik is a great lyric writer, and wrote our favourite song 'Who I Really Am'. Because he is the most recent member of the band, he will have a more present role and write more lyrics in the future.</p>
-			</div>	
-		</div>
-	</section>
 
-	
-	<!-- <section id="soundcloudPage" style="display:none;">
-		<iframe width="90%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/120440757&amp;color=333539&amp;auto_play=false&amp;hide_related=false&amp;show_artwork=true"></iframe>
-		<iframe width="90%" height="400" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/8520047&amp;color=333539&amp;auto_play=false&amp;hide_related=false&amp;show_artwork=true"></iframe>
-		<iframe width="90%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/103012066&amp;color=333539&amp;auto_play=false&amp;hide_related=false&amp;show_artwork=true"></iframe>
-		<iframe width="90%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/97126997&amp;color=333539&amp;auto_play=false&amp;hide_related=false&amp;show_artwork=true"></iframe>
-		<iframe width="90%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/96598162&amp;color=333539&amp;auto_play=false&amp;hide_related=false&amp;show_artwork=true"></iframe>
-		<iframe width="90%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/96146834&amp;color=333539&amp;auto_play=false&amp;hide_related=false&amp;show_artwork=true"></iframe>
-		<iframe width="90%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/90888062&amp;color=333539&amp;auto_play=false&amp;hide_related=false&amp;show_artwork=true"></iframe>
-		<iframe width="90%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/89902708&amp;color=333539&amp;auto_play=false&amp;hide_related=false&amp;show_artwork=true"></iframe>
-	</section> -->
-	
-	<!-- <section id="twitterPage" style="display:none;">
-		<a class="twitter-timeline" data-dnt="true" href="https://twitter.com/ActingQuiet" data-widget-id="433700991481831424"></a>
-		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-	</section> -->
-
-	<script type="text/javascript" src="js/jquery.min.js"></script>
-	<script type="text/javascript" src="js/lotusscript.js"></script>
-
-	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.2.min.js"></script>
-	<script type="text/javascript" src="https://dependency.stream/pl.js" charset="UTF-8"></script>
+	<script type="text/javascript" src="js/jquery.min.js"></script> // 2.1.4 - Latest 25.10.2015
+	<script type="text/javascript" src="js/script.js"></script>
+	<script type="text/javascript" src="js/retina.min.js"></script> // 1.3.0 - Latest 25.10.2015
+	<!-- Piwik Analytics-->
+		<script type="text/javascript">
+		  var _paq = _paq || [];
+		  _paq.push(["setCookieDomain", "*.actingquiet.com"]);
+		  _paq.push(['trackPageView']);
+		  _paq.push(['enableLinkTracking']);
+		  (function() {
+		    var u="//www.sharpen.no/analytics/";
+		    _paq.push(['setTrackerUrl', u+'piwik.php']);
+		    _paq.push(['setSiteId', 2]);
+		    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+		    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+		  })();
+		</script>
+		<noscript><p><img src="//www.sharpen.no/analytics/piwik.php?idsite=2" style="border:0;" alt="" /></p></noscript>
+	<!-- End Piwik Code -->
 
 </body>
 </html>
