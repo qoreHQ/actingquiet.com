@@ -1,326 +1,133 @@
-::selection { background-color: #C8C8C8; color: #333539;}
-::-moz-selection { background-color: #C8C8C8; color: #333539;}
-p, span, h1, h2, h3, h4, h5, h6, li, nav {
+p, span, h1, h2, h3, h4, h5, h6 {
 	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 	text-rendering: optimizelegibility;
-	color: white;
+	font-family: "DIN";
 }
 
+body {
+	margin: 0;
+	padding: 0;
+}
 
-/* general layout */
-	html {
-		width: 100%;
-	}
-	body {
-		background-color: #30292f;
-		width: 100%; /* wp width */ 
-		margin: 0 auto 0 auto;
-		padding-top: 15px;
-		/*-webkit-box-shadow: 0 0 50px 0 #000000;*/
-		/*-moz-box-shadow: 0 0 50px 0 #000000;*/
-		/*box-shadow: 0 0 50px 0 rgba(33, 35, 39, .3);*/
-		color: dark-gray;
-		font-family: "Gotham";
-	}
-	a {
-		color: white;
-		text-decoration: none
-	}
-	
-	
-	
-	
-	
-	
-	header {
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100%;
-		
-		background-color: rgba(89, 36, 83, .7);
-		color: white;
-	}
-	
-	header ul {
-		padding: 13px 0 13px 0;
-	
-		-webkit-margin-before: 0em;
-		-webkit-margin-after: 0em;
-		-webkit-margin-start: 0px;
-		-webkit-margin-end: 0px;
-		-webkit-padding-start:0px;
-	
-		list-style: none;
-		text-indent: 0;
-		text-align: center;
-		
-		cursor: default;
-	}
-	
-	header ul li {	
-		margin: 0;
-		display: inline-block;
-		cursor: pointer;
-		padding: 0 15px 0 15px;
-	}
-	
-/*//////////////*/
+h1, h2 {
+	text-transform: uppercase;
+	font-weight: Bold;
+	text-align: center;
+}
 
+h1 {
+	color: rgb(150, 150, 150);
+	font-size: 2.3em;
+	letter-spacing: .3em;
+}
 
-/* Page: front */
+h2 {
+	color: rgb(142, 193, 204);
+	font-size: 1.3em;
+	letter-spacing: .1em;
+}
 
-	#topimg {
-		display: block;
-		margin: auto;
-		margin-top: 130px; 
-	}
+/* Header */
+.textureImg {
+	width: 100%;
+	height: 240px;
+	object-fit: cover;
+	object-position: 500px 500px;
+	object-position: inherit;
+}
 
-	#largeType {
-		text-align: center;
-		display: block;
-		font-weight: normal;
-		margin: 80px auto 10px auto;
-		font-size: 4em;
-		text-transform: uppercase;
-		font-family: "Manifesto", "Gotham", sans-serif;
-	}
-	#largeType span {
-		letter-spacing: 1em;
-	}
-	#subtitle {
-		text-align: center;	
-		font-weight: normal;
-		letter-spacing: 0.05em;
-		color: #bdeef0;
-	}
-	
-	
-	#infoText {
-		display: block;
-		max-width: 570px;
-		margin: 0 auto 40px auto;
-		padding: 10px;
-	}
+.textureImg2 {
+	width: 100%;
+	height: 240px;
+	background-image: url("../img/texture.png");
+}
 
-	#infoText h2 {
-		font-size: 2em;
-		font-weight: normal;
-		text-align: center;
-		letter-spacing: .07em;
-		text-transform: uppercase;
-	}
-	#infoText p {
-		margin: 0 0 1em 0;
-		padding: 0;
-		line-height: 1.5em;
-	}
+.parallax-container {
+	height: 500px;
+}
 
-	
-	#albumInfo {	
-		display: block;
-		width: 590px;
-		margin: 30px auto 100px auto; 
-		line-height: 1.7em;
-		font-size: 0.9em;
-		height: 300px;
-	}
-	
-	#albumInfo img {
-		float: left;
-	}
-	
-	#albumInfo ol {
-		width: 240px;
-		display: inline-block;
-		margin: 37px 0 0 20px;
-	}
-	
-	#contactInfo {
-		text-align: center;
-	}
-/*//////////////*/
+img.seal {
+	height: 300px;
+	display: block;
+	width: auto;
+	margin: 100px auto 0 auto;
+}
 
+/* Main section */
 
-/* Footer */
-	/* buy section */
-	.buyLinks {
-		text-align: center;
-		font-family: "Gotham";
-		cursor: pointer;
-		padding: 60px 0 60px 0;
-	}
-	
-	.buyLinks a {
-		margin: 0 25px 0 25px;
-		padding: 0;
-		font-family: "Orator Std";
-		text-decoration: none;
-		font-size: 1.2em;
-		opacity: 1;
-		cursor: pointer;
-	}
-	.buyLinks a:hover {
-		opacity: .8;
-		cursor: pointer;
-	}
-/*////////*/
+#main h1 {
+	margin-top: 140px;
+}
+#main h2 {
+	margin-top: -26px;
+}
 
+#main p {
+	display: block;
+	width: 850px;
+	margin: 70px auto 0 auto;
+	font-family: "DIN";
+	line-height: 1.5em;
+	font-size: 1.1em;
+}
 
-/* Responsiveness*/
+/* Get album section */
+section#get_album h2 {
+	margin-top: 140px;
+}
 
-	/* General mobile view - less than 590px */
-	@media screen and (max-width: 590px) {
-		header #headerTitle {
-			display: block !important;
-			text-align: center;
-			text-transform: uppercase;
-			font-size: 1.3em;
-			font-weight: bold;
-			margin: 20px 0 10px 0;
-		}
-		
-		header ul {
-			display: none;
-			margin-bottom: 10px;
-		}
-		
-		#header_arrow {
-			display: block !important;
-			margin: 0 auto 10px auto;
-			
-		}
-		
-		header ul li {
-			padding: 5px 0 5px 0;
-			display: block
-		}
-		
-		
-		#topimg {
-			margin-top: 80px;
-			width: 270px;
-			height: 270px;
-		}
-		
-		#largeType {
-			font-size: 1.6em;
-			margin: 40px 0 0px 0;
-		}
-	
-		#subtitle {
-			font-size: 1em;
-		}
-			
-		.buyLinks {
-			padding: 13px 0 13px 0;
-		}
-		.buyLinks a {
-			margin: 0 10px 0 10px;
-		}
-		.buyLinks a img {
-			height: 15px;
-		}
-	}
-	
-	/* Large mobile view - 590px to 374px*/
-	@media screen and (max-width: 590px) and (min-width: 374px){
-		header #headerTitle {
-			font-size: 1.5em;
-		}
-		
-		header ul {
-			font-size: 1.2em;
-		}
-		
-		#topimg {
-			margin-top: 110px;
-		}
-		
-		#largeType {
-			font-size: 2.4em;
-		}
-		
-		.buyLinks a img {
-			height: 18px;
-		}
-	}
-	
+section#get_album div {
+	text-align: center;
+}
 
-/*//////////////*/
+section#get_album img {
+	height: 35px;
+	width: auto;
+	margin: 0 30px 0 30px;
+}
 
+/* Album info section */
+section#album_info {
+	width: 850px;
+	margin: 140px auto 140px auto;
+}
 
+section#album_info #info {
+	width: 415px;
+	float: left;
+	margin-bottom: 140px;
+}
 
-/* Fonts */
-	@font-face {
-		font-family: 'Orator Std';
-		src: url('../fonts/dator-regular-webfont.eot');
-		src: url('../fonts/dator-regular-webfont.eot?#iefix') format('embedded-opentype'),
-			 url('../fonts/dator-regular-webfont.woff') format('woff'),
-			 url('../fonts/dator-regular-webfont.ttf') format('truetype'),
-			 url('../fonts/dator-regular-webfont.svg#datorregular') format('svg');
-		font-weight: normal;
-		font-style: normal;
+section#album_info #info img#cover {
+	width: 100%;
+}
 
-	}
+section#album_info #info img#bandcamp {
+	opacity: .5;
+	width: 100px;
+	margin-top: 20px;
+}
 
-	@font-face {
-		font-family: 'Orator Std';
-		src: url('../fonts/dator-italic-regular-webfont.eot');
-		src: url('../fonts/dator-italic-regular-webfont.eot?#iefix') format('embedded-opentype'),
-			 url('../fonts/dator-italic-regular-webfont.woff') format('woff'),
-			 url('../fonts/dator-italic-regular-webfont.ttf') format('truetype'),
-			 url('../fonts/dator-italic-regular-webfont.svg#dator-italicregular') format('svg');
-		font-weight: normal;
-		font-style: italic;
+section#album_info #info h3 {
+	text-transform: uppercase;
+	font-weight: Bold;
+	font-size: 1.3em;
+	letter-spacing: .1em;
+	margin: 0;
+}
 
-	}
+section#album_info #info h3 #kaizen {
+	color: rgb(142, 193, 204);
+}
 
-	@font-face {
-		font-family: 'Gotham';
-		src: url('../fonts/gotham-book-webfont.eot');
-		src: url('../fonts/gotham-book-webfont.eot?#iefix') format('embedded-opentype'),
-			 url('../fonts/gotham-book-webfont.woff') format('woff'),
-			 url('../fonts/gotham-book-webfont.ttf') format('truetype'),
-			 url('../fonts/gotham-book-webfont.svg#gotham_bookregular') format('svg');
-		font-weight: normal;
-		font-style: normal;
+section#album_info #songlist {
+	display: inline-block;
+	width: 415px;
+	float: left;
+	margin: 0 0 140px 20px;
+}
 
-	}
-
-	@font-face {
-		font-family: 'Gotham';
-		src: url('../fonts/gotham-italic-webfont.eot');
-		src: url('../fonts/gotham-italic-webfont.eot?#iefix') format('embedded-opentype'),
-			 url('../fonts/gotham-italic-webfont.woff') format('woff'),
-			 url('../fonts/gotham-italic-webfont.ttf') format('truetype'),
-			 url('../fonts/gotham-italic-webfont.svg#gotham_bookmedium') format('svg');
-		font-weight: normal;
-		font-style: italic;
-
-	}
-	@font-face {
-    font-family: 'Gotham';
-    src: url('../fonts/gothams-bold-webfont.eot');
-    src: url('../fonts/gothams-bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/gothams-bold-webfont.woff2') format('woff2'),
-         url('../fonts/gothams-bold-webfont.woff') format('woff'),
-         url('../fonts/gothams-bold-webfont.ttf') format('truetype'),
-         url('../fonts/gothams-bold-webfont.svg#kopkpbold') format('svg');
-    font-weight: bold;
-    font-style: normal;
-	}
-	
-	@font-face {
-    font-family: 'Manifesto';
-    src: url('../fonts/manifesto-webfont.eot');
-    src: url('../fonts/manifesto-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/manifesto-webfont.woff2') format('woff2'),
-         url('../fonts/manifesto-webfont.woff') format('woff'),
-         url('../fonts/manifesto-webfont.ttf') format('truetype'),
-         url('../fonts/manifesto-webfont.svg#manifestoregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-	}
-/*//////////////*/
-
+.parallax-container#last {
+	width: 100%;
+}
