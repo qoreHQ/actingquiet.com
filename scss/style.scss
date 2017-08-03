@@ -1,0 +1,693 @@
+// 	---------------------------------------
+//	- Copyright © Johannes T. Røsvik 2012 -
+//	-------- All Rights Reserved ----------
+//	---------------------------------------
+
+// 	------------------
+// 	-  SCSS CONTENT  -
+// 	------------------
+
+//	Variables
+	$main-color: #404041;
+	$lucky-color: #d7e1dd;
+	$lucky-dark: #94afa4;
+	$sans-serif: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+//	---------
+
+//	Mixins
+	@mixin borderradius($radius : 50%) {
+		-webkit-border-radius: $radius;
+		-khtml-border-radius: $radius;
+		-moz-border-radius: $radius;
+		-ms-border-radius: $radius;
+		-o-border-radius: $radius;
+		border-radius: $radius;
+	}
+
+	@mixin transition($data) {
+		-webkit-transition: $data;
+		-moz-transition: $data;
+		-ms-transition: $data;
+		-o-transition: $data;
+		transition: $data;
+	}
+	@mixin transform($data) {
+		-webkit-transform: $data;
+		-moz-transform: $data;
+		-ms-transform: $data;
+		-o-transform: $data;
+		transform: $data;
+	}
+
+	@mixin gradient($top, $bottom) {
+		background: $top;
+		background: -moz-linear-gradient(top,  $top 0%, $bottom 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$top), color-stop(100%,$bottom)); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top,  $top 0%,$bottom 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top,  $top 0%,$bottom 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(top,  $top 0%,$bottom 100%); /* IE10+ */
+		background: linear-gradient(top,  $top 0%,$bottom 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$top', endColorstr='$bottom',GradientType=0 ); /* IE6-9 */
+	}
+//	------
+
+//	Addons
+	@import "copyright";
+	@import "fonts";
+//	------
+
+// 	FONTS AVAILABLE
+// 	'icons', 'Brandon', 'Code-Pro', 'Univers', 'Novecento', 'Sintony', 'Gilda Display'
+//		Brandon: font-weight normal/bold
+//		Sintony: font-weight 400/700
+
+// 	------------------
+// 	-    MAIN CSS    -
+// 	------------------
+
+#test {
+	width: 960px;
+	height: 300px;
+	position: fixed;
+	top: 0;
+	left: 0;
+
+	background-color: green;
+}
+
+
+body {
+	background-color: white;
+	width: 100%;
+}
+
+::selection { background-color: $lucky-color; }
+::-moz-selection { background-color: $lucky-color; }
+
+//	Text optimizaation
+p, span, h1, h2, h3, h4, h5, h6 {
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizelegibility;
+	font-weight: normal;
+}
+a {
+	text-decoration: none;
+}
+
+
+
+//	••••••  \\
+//	Header  \\
+//	••••••  \\
+#heading {	
+	width: 100%;
+	background-color: #404041;
+
+	header {
+		width: 1100px;
+		margin: auto;
+		height: 140px;
+
+		a, h1, ul {
+			display: inline-block;
+		}
+
+		#mainimg {
+			margin-bottom: -5px;
+			width: 51px;
+			height: 51px;
+			img {
+				display: block;
+				&:hover, &:active, &:focus {
+					@include transform(rotate(360deg));
+					@include transition(all 0.5s);
+				}
+			}
+		}
+		h1 {
+			color: white;
+			font-family: Brandon;
+			font-weight: bold;
+			font-size: 3.5em;
+			margin-top: 31px;
+			margin-left: 40px;
+			margin-bottom: 0;
+		}
+				
+		ul {
+			float: right;
+			margin-top: 36px;
+			li {
+				margin-left: 20px;
+				display: inline-block;
+			}
+		}	
+	}
+}
+.touchstart {
+	@include transform(rotate(360deg));
+	@include transition(all 0.5s);
+}
+
+
+
+//	••••••••  \\
+//	Top Page  \\
+//	••••••••  \\
+#topwall {
+	margin-top: 0;
+	height: 850px;
+	width: 100%;
+	background-color: white;
+	background-image: url(../img/pattern500.jpg);
+	background-size: 500px 533px;
+
+	border-bottom: 1px solid $main-color;
+	
+	#topcover {
+		display: block;
+		width: 498px;
+		height: 498px;
+		margin: auto;
+		padding-top: 100px;
+	}
+
+	#crazy {
+		position: absolute;
+		background-color: rgba(250, 250, 250, 0.5);
+		height: 108px;
+		width: 100%;
+		margin-top: 80px;
+		#crazy_content {
+			width: 1100px;
+			margin: auto;
+			
+			h2, div {
+				display: inline-block;
+			}
+			h2 {
+				color: $main-color;
+				margin-top: 7px;
+				font-family: Univers;
+				font-size: 6em;
+				letter-spacing: -4px;
+			}
+			div {
+				cursor: pointer;
+				float: right;
+				background-color: #616F6A;
+				margin-top: 20px;
+				padding: 6px 20px 4px 20px;
+				@include borderradius(8px);
+				@include transition(background-color 0.5s);
+				&:hover {
+					background-color: #394540;
+				}
+				#gin {
+					color: white;
+					font-size: 2.5em;
+					letter-spacing: -1px;
+					font-family: Brandon;
+					font-weight: Bold;
+				}
+			}
+		}
+	}
+}
+
+h2.h2_banner {
+	width: 100%;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	margin: 0;
+
+
+	text-align: center;
+	background-color: $main-color;
+	color: white;
+	font-size: 4.5em;
+	font-family: Univers;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	span {
+		font-size: 1.3em;
+		color: $lucky-color;
+	}
+}
+
+
+//	••••••  \\
+//	Get it  \\
+//	••••••  \\
+#getit {
+	background-color: rgba(64, 64, 65, .8);
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	div#im {
+		img {
+			margin-top: 200px;
+			width: 300px;
+			height: 300px;
+		}
+		text-align: center;
+	}
+	#cancel {
+		margin-top: 30px;
+		text-align: center;
+		span {
+			@include borderradius(8px);
+			@include transition(background-color 0.5s);
+			cursor: pointer;
+			padding: 6px 20px 4px 20px;
+			background-color: #616F6A;
+			color: white;
+			font-size: 2.5em;
+			letter-spacing: -1px;
+			font-family: Brandon;
+			font-weight: Bold;
+			&:hover {
+				background-color: #394540;
+			}
+		}
+	}
+}
+
+
+//	••••••  \\
+//	Pascal  \\
+//	••••••  \\
+#pascal_large_text {
+	text-align:center;
+	background-color: $lucky-color;
+	padding-top: 200px;
+	padding-bottom: 200px;
+	#this_is {
+		font-size: 1.5em;
+		font-family: 'Brandon';
+		line-height: 3em;
+		padding-top: -3em;
+		color: $main-color;
+	}
+	div {
+		width: 660px;
+		height: 20px;
+		margin: auto;
+		background: url(../img/zigzag.png);
+	}
+	#large_text {
+		font-size: 10em;
+		font-family: 'Brandon';
+		line-height: 1.3em;
+		color: $main-color;
+	}
+}
+
+#album_content {
+	div {
+		width: 700px;
+		margin: auto;
+		padding-bottom: 150px;
+		img {
+			display: inline-block;
+			width: 400px;
+			height: 400px;
+			-webkit-box-shadow: 0px 0px 13px rgba(0, 0, 0, 0.2);
+			-moz-box-shadow:    0px 0px 13px rgba(0, 0, 0, 0.2);
+			box-shadow:         0px 0px 13px rgba(0, 0, 0, 0.2);
+		}
+		ol {
+			float: right;
+			display: inline-block;
+			width: 150px;
+			color: $main-color;
+			font-family: Brandon;
+			font-size: 1.2em;
+			margin-top: 116px;
+			//list-style-image: url("../img/play.png");
+			li {
+				padding: 5px;
+				padding-left: 10px;
+			}
+		}
+	}	
+
+	background-color: $lucky-color;
+}
+
+#pascal_about {
+	height: 400px;
+	background-color: $lucky-color;
+	padding-bottom: 100px;
+	p {
+		padding-top: 15px;
+		width: 500px;
+		margin: auto;
+		color: $main-color;
+		font-family: Brandon;
+		font-size: 1.1em;
+		text-align: center;
+	}
+}
+
+
+
+//	••••••••••  \\
+//	SoundCloud  \\
+//	••••••••••  \\
+#sc_prev {
+	margin: 0;
+	height: 650px;
+	background-color: white;
+	
+	#sclogotext {
+		position: absolute;
+		z-index: 40;
+		display: block;
+		width: 100%;
+		margin: auto;
+		margin-top: 300px;
+	}
+	#grad-overlay {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 650px;
+
+		background: -moz-linear-gradient(left,  rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.28) 9%, rgba(0,0,0,0.05) 25%, rgba(0,0,0,0) 50%, rgba(0,0,0,0.05) 75%, rgba(0,0,0,0.28) 91%, rgba(0,0,0,0.5) 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,0,0,0.5)), color-stop(9%,rgba(0,0,0,0.28)), color-stop(25%,rgba(0,0,0,0.05)), color-stop(50%,rgba(0,0,0,0)), color-stop(75%,rgba(0,0,0,0.05)), color-stop(91%,rgba(0,0,0,0.28)), color-stop(100%,rgba(0,0,0,0.5))); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(left,  rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.28) 9%,rgba(0,0,0,0.05) 25%,rgba(0,0,0,0) 50%,rgba(0,0,0,0.05) 75%,rgba(0,0,0,0.28) 91%,rgba(0,0,0,0.5) 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(left,  rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.28) 9%,rgba(0,0,0,0.05) 25%,rgba(0,0,0,0) 50%,rgba(0,0,0,0.05) 75%,rgba(0,0,0,0.28) 91%,rgba(0,0,0,0.5) 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(left,  rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.28) 9%,rgba(0,0,0,0.05) 25%,rgba(0,0,0,0) 50%,rgba(0,0,0,0.05) 75%,rgba(0,0,0,0.28) 91%,rgba(0,0,0,0.5) 100%); /* IE10+ */
+		background: linear-gradient(to right,  rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.28) 9%,rgba(0,0,0,0.05) 25%,rgba(0,0,0,0) 50%,rgba(0,0,0,0.05) 75%,rgba(0,0,0,0.28) 91%,rgba(0,0,0,0.5) 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80000000', endColorstr='#80000000',GradientType=1 ); /* IE6-9 */
+	}
+	a {
+		text-decoration: none;
+	}
+	p, h1 {
+		text-align: center;
+		color: white;
+	}
+	h1 {
+		margin: 0;
+		padding: 0;
+		padding-top: 130px;
+		font-size: 8em;
+		font-family: Novecento;
+	}
+	img {
+		padding-top: 220px;
+		display: block;
+		margin: auto;
+	}
+	p {
+		position: relative;
+		font-weight: bold;
+		padding: 0;
+		padding-top: 10px;
+		margin: 0;
+		font-family: Brandon;
+	}
+	.slides {
+		li {
+			margin: 0;
+			width: 100%;
+			background-size: 100% auto;
+			height: 650px;
+		}
+		#goodenough {
+			background: url(../img/goodenough.jpg);
+			background-size: 100% auto;
+			text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+			font-size: 0.7em;
+		}
+		#wolf {
+			background: url(../img/wolf.jpg);
+			background-size: 100% auto;
+		}
+		#bismuth {
+			background: url(../img/bismuth.jpg);
+			background-size: 100% auto;
+		}
+		#cosmic {
+			background: url(../img/cosmic.jpg);
+			background-size: 100% auto;
+		}
+		#monazite {
+			background: url(../img/monazite.jpg);
+			background-size: 100% auto;
+		}
+		#channel {
+			background: url(../img/channel.jpg);
+			background-size: 100% auto;
+			text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+		}
+	}
+}
+
+
+
+//	••••••••  \\
+//	About Us  \\
+//	••••••••  \\
+#aboutholder {
+	width: 100%;
+	background-color: white;
+	padding-top: 100px;
+	padding-bottom: 300px;
+	h1 {
+
+		text-align: center;
+
+		font-family: Univers;
+
+	}
+}
+
+#about {
+	width: 879px;
+	height: 300px;
+	margin: auto;
+
+	.aboutbox {
+		padding-top: 49px;
+		width: 33.33%;
+		min-height: 445px;
+		float: left;
+		display: inline-block;
+		p {
+			margin: 30px;
+			font-family: Brandon;
+			text-align: justify;
+		}
+	}
+
+	#nr1, #nr3, #nr2{
+		background-color: $lucky-color;
+	}
+
+
+	.circle_cont {
+		margin: 0 50px 50px 50px;
+		margin-top: 0;
+		@include borderradius(50%);
+		background-color: $lucky-dark;
+		height: 200px;
+		width: 200px;
+		display: inline-block;
+		.member{
+			padding: 10px;
+			width: 180px;
+			height: 180px;
+		}
+		// .twitter {
+		// 	width: 62px;
+		// 	height: 51px;
+		// }
+		div {
+			@include borderradius(50%);
+			position: absolute;
+			z-index: 100;	
+			background-color: rgba(65, 65, 66, 0.7);
+			margin-top: -194px;
+			margin-left: 10px;
+			height: 180px;
+			width: 180px;
+			img {
+				margin: 63px;
+				margin-top: 67px;
+				opacity: .85;
+				width: 62px;
+				height: 51px;
+			}
+		}
+		h3 {
+			padding-top: 10px;
+			margin-top: 0;
+			font-size: 1.7em;
+			display: block;
+			text-align: center;
+			font-family: Univers;
+			margin-bottom: 0;
+		}
+
+	}
+
+}
+
+
+
+//	••••••  \\
+//	Footer  \\
+//	••••••  \\
+footer {
+	margin: 0;
+	background-color: $main-color;
+	width: 100%;
+	// position: absolute;
+
+	p#copy {
+		padding: 30px;
+		margin: 0;
+		text-align: center;
+
+		color: white;
+		font-family: Brandon;
+		font-size: 0.8em;
+	}
+	-webkit-box-shadow: 0px 0px 13px rgba(0, 0, 0, 0.4);
+	-moz-box-shadow:    0px 0px 13px rgba(0, 0, 0, 0.4);
+	box-shadow:         0px 0px 13px rgba(0, 0, 0, 0.4);
+
+}
+
+
+
+//	•••••  \\
+//	Quote  \\
+//	•••••  \\
+#quote {
+	display: none;
+
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	z-index: -4;
+	
+	margin: 0;
+	padding-top: 200px;
+	padding-bottom: 120px;
+
+	background-color: #e3e3e3;
+	background: url(../img/cloth_alike.png);
+	text-align: center;
+	color: $main-color;
+	font-family: Brandon;
+	i {
+		display: block;
+		padding: 13px;
+		font-size: 0.8em;
+	}
+}
+
+
+
+
+
+//	--------------------
+//	-  RESPONSIVE CSS  -
+//	--------------------
+
+
+//	•••••••••••••••  \\
+//	1200px -> 890px  \\
+//	•••••••••••••••  \\
+@media (max-width: 1200px) {
+
+	// HEADER
+	#heading header {
+		width: 100%;
+		#mainimg { padding-left: 50px; }
+		ul { padding-right: 50px; }
+	}
+
+	// TOP PAGE
+	#topwall #crazy #crazy_content {
+		width: 100%;
+		h2 { padding-left: 50px; }
+		div { margin-right: 50px; }
+	}
+
+	#sc_prev {
+		height: 550px;
+		#sclogotext { margin-top: 427px; }
+		img { padding-top: 0; }
+		a .flexslider {
+			height: 550px;
+			ul.slides li{
+				height: 550px;
+				#grad-overlay { height: 550px; }
+			}
+		}
+	}
+}
+
+//	•••••••••••••••  \\
+//	1017px -> 890px  \\
+//	•••••••••••••••  \\
+// (SoundCloud image)
+@media (max-width: 1017px) {
+	#sc_prev {
+		#sclogotext { margin-top: 355px; }
+		img { padding-top: 0; }
+	}
+
+	$this-height: 480px;
+	#sc_prev { height: $this-height; a .flexslider { height: $this-height; ul.slides li{ height: $this-height; #grad-overlay { height: $this-height; } } } }
+}
+
+//	••••••••••••  \\
+//	960px -> 890px  \\
+//	••••••••••••  \\
+// (Getit image)
+@media (max-width: 960px) {
+	#getit {
+		min-width: 890px;
+		#im a img{
+			width: 250px;
+			height: 250px;
+		}
+	}
+	#getit { div#im { img {
+			margin-top: 130px;
+	}}}
+}
+
+
+//	••••••••••••  \\
+//	890px -> 0px  \\
+//	••••••••••••  \\
+@media (max-width: 890px) {
+
+	body {
+		width: 890px;
+	}
+
+	#topwall #crazy {
+		width: 890px;
+		#crazy_content {
+			width: 890px;
+			h2 { padding-left: 50px; }
+			div { margin-right: 50px; }
+		}
+	}
+
+	footer {
+		width: 890px;
+	}
+
+}

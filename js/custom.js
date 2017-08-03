@@ -1,99 +1,104 @@
-// Navigation
-$(function() {	
-	var $el, leftPos;
-		$navigation = $("#navid");    
+$(function() {
+	
 
-	$navigation.append("<li id='transid'></li>");
-	
-	var $transition = $("#transid");
-	
-	$transition
-		.width($(".current").width())
-		.height($navigation.height())
-		.css("left", $(".current a").position().left)
-		.data("leftData", $(".current a").position().left);
-	
-	$("#navid a").hover(function() {
-		$el = $(this);
-		leftPos = $el.position().left;
-		$transition.stop().animate({
-			left: leftPos,
-		})
-	}, function() {
-		$transition.stop().animate({
-			left: $transition.data("leftData"),
+	// log window width
+	// $(window).resize(function() {
+	// 	console.log($(window).width());
+	// });
+
+
+	// Crazy float right fix
+	$('body').hide(0, function(){
+		$('body').show(0);
+	});
+
+
+	// Getit Show/Hide
+	$('#crazy_content div').click(function() {
+		$('#getit').fadeIn(300);
+	});
+	$('#getit').click(function() {
+		$('#getit').fadeOut(300);
+	});
+
+	// About social toggle
+	$('.circle_cont').mouseenter(function() {
+		$(this).children('a').fadeIn(200);
+	}).mouseleave(function() {
+		$(this).children('a').fadeOut(200);
+	});
+
+
+	// Large type expand effect
+	$('#large_text').hover(function() {
+		$('#pascal_large_text div').animate({width:'693px'}, 700);
+	});
+
+	$('#large_text').click(function() {
+		$('#pascal_large_text div').animate({width:'660px'}, 300, function() {
+			$('#pascal_large_text div').animate({width:'693px'}, 300);
 		});
 	});
-	
-	$(".current a").mouseenter(); /* IE */
 
-	$('#a, #h, #i').hover(function() {
-		$(this).animate({color: "#404041"}, 0);
-		$('.current a').animate({color: "#ffffff"}, 0);
-	}).mouseleave(function() {
-		$(this).animate({color: "#ffffff"}, 0);
-		$('.current a').animate({color: "#404041"}, 0);
+	
+	// Quote show function
+	$(window).scroll(function() {
+
+		if($(window).scrollTop() + $(window).height() == $(document).height()) {
+			setTimeout(function() {
+				$('#quote').show();
+				$('body').css('margin-bottom', '440px');
+			}, 1000);
+		};
+
 	});
+
+	// About interactivity
+	var aboutbox = $()
+	$('.aboutbox').hover(function() {
+		$(this).animate({
+			'background-color': '#ccd6d1'
+		}, 200);
+	});
+	$('.aboutbox').mouseleave(function() {
+		$(this).animate({
+			'background-color': '#d7e1dd'
+		}, 200);
+	});
+
+	// SoundCloud flexslide
+	$(window).load(function() {
+		$('.flexslider').flexslider({
+			directionNav: false
+		});
+	});
+
+	// Logo spin touch
+	$('#mainimg img').on({ 'touchstart' : function(){ 
+		$(this).addClass('touchstart');
+		setTimeout(function() {
+			$('.touchstart').removeClass('touchstart')
+		}, 700);
+	} });
+
 });
 
 
-$(function() { 
-	// Copyright positioner
-	// var content = $("body");
-	// content.css("padding-bottom", document.height - content.height() - $('footer').height() + "px");
-
-	// console.log($('footer div').height());
-
-	// var hoydeCont = content.height(),
-	// 	hoydeBody = document.height,
-	// 	hoydePad = hoydeBody - hoydeCont;
-
-	// console.log("Content is " + hoydeCont + "px high.");
-	// console.log("Body is " + hoydeBody + "px high.");
-	// console.log("padding-bottom should be " + hoydePad + "px");
 
 
-	// Image fader
-	$('.opertus, a .opertus').show();
-	
-	$('.fade').cycle({
-		fx:      'fade', 
-		timeout:  5000
-	});
 
 
-	// Language switcher
-	$('.nor').click(function() {
-		$('#lange').hide();
-		$('#langn').show();
-	});
-	
-	$('.eng').click(function() {
-		$('#langn').hide();
-		$('#lange').show();
-	});
 
 
-	// // Music player
-	// var song = new Audio('lucky.mp3','lucky.ogg');
-	
-	// if (song.canPlayType('audio/mpeg;')) {
-	// 	song.type= 'audio/mpeg';
-	// 	song.src= 'music/lucky.mp3';
-	// } else {
-	// 	song.type= 'audio/ogg';
-	// 	song.src= 'music/lucky.ogg';
-	// }
-	
-	// $('.play').click(function() {
-	// 	song.play();
-	// 	$('.play').hide();
-	// 	$('.pause').show();
-	// });
-	
-	// $('.pause').click(function() {
-	// 	song.pause();
-	// 	$('.pause').hide();
-	// 	$('.play').show();
-	// });
-});
+
+
+
+
+
+
+
+
+
+
+
+
