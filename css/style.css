@@ -54,6 +54,24 @@ img.seal {
 	margin: 100px auto 0 auto;
 }
 
+#titlecontainer {
+	display: block;
+	width: auto;
+	margin: 180px auto 0 auto;
+	text-align: center;
+}
+
+#titlecontainer h1 {
+	color: white;
+	border: solid 5px white;
+	padding: 10px 10px 10px 20px;
+	text-shadow: 0 0 20px rgba(43, 23, 41, .4);
+	display: inline-block;
+	margin: auto;
+	text-align: center;
+	line-height: 1.5em;
+}
+
 /* Main section */
 
 #main h1 {
