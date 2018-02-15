@@ -167,13 +167,14 @@ section#album_info #songlist {
 	width: 100%;
 }
 
-#footer {
+footer {
 	text-align: center;
 	width: 100%;
 	position: absolute;
 	bottom: 15px;
 	color: white;
 	text-shadow: 0 0 10px rgba(43, 23, 41, .9);
+	line-height: .8em;
 }
 
 @media screen and (max-width: 850px) {
@@ -202,6 +203,7 @@ section#album_info #songlist {
 	}
 
 	#sm-footer {
+		line-height: .8em;
 		display: block !important;
 		text-align: center;
 		margin-top: 70px;
