@@ -17,5 +17,5 @@ Acting Quiet is an indie band run by [@vagnes](https://github.com/vagnes) and [@
 - Bandcamp: [actingquiet.bandcamp.com](https://actingquiet.bandcamp.com)
 - SoundCloud: [soundcloud.com/acting-quiet](https://soundcloud.com/acting-quiet/)
 - YouTube: [youtube.com/user/ActingQuiet](https://www.youtube.com/user/ActingQuiet)
-- Twitter: [twitter.com/actingquiet)](https://twitter.com/actingquiet)
+- Twitter: [twitter.com/actingquiet](https://twitter.com/actingquiet)
 - Bēhance: [behance.net/actingquiet](https://www.behance.net/actingquiet)
