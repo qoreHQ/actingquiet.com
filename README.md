@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://www.actingquiet.com/img/logo.svg" width="70" alt="qore">
+  <img src="https://www.actingquiet.com/img/logo.svg" width="70" alt="actingquiet">
 </p>
 
 # Webpage for Acting Quiet
