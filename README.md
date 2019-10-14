@@ -1,4 +1,6 @@
-<img src="https://qore.no/res/logo-text.svg" width="100" alt="qore">
+<p align="center">
+  <img src="https://www.actingquiet.com/img/logo.svg" width="70" alt="qore">
+</p>
 
 # Webpage for Acting Quiet
 Acting Quiet is an indie band run by [@vagnes](https://github.com/vagnes) and [@rosvik](https://github.com/rosvik). This repo contains the source code for [actingquiet.com](https://actingquiet.com). Acting Quiet has released four studio albums since 2012, and each one has its own website.
