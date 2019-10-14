@@ -3,10 +3,10 @@
 # Webpage for Acting Quiet
 Acting Quiet is an indie band run by [@vagnes](https://github.com/vagnes) and [@rosvik](https://github.com/rosvik). This repo contains the source code for [actingquiet.com](https://actingquiet.com). Acting Quiet has released four studio albums since 2012, and each one has its own website.
 
-- Lucky (2012) - [lucky.actingquiet.com](https://lucky.actingquiet.com) / [tree/lucky](../../tree/lucky)
-- Pascal (2013) - [pascal.actingquiet.com](https://pascal.actingquiet.com) / [tree/pascal](../../tree/pascal)
-- Lotus (2014) - [lotus.actingquiet.com](https://lotus.actingquiet.com) / [tree/lotus](../../tree/lotus)
-- Kaizen (2016) - [actingquiet.com](https://actingquiet.com) / [tree/kaizen](../../tree/kaizen)
+- Lucky (2012) - [lucky.actingquiet.com](https://lucky.actingquiet.com) / [source code](https://github.com/qoreHQ/actingquiet.com/tree/lucky)
+- Pascal (2013) - [pascal.actingquiet.com](https://pascal.actingquiet.com) / [source code](https://github.com/qoreHQ/actingquiet.com/tree/pascal)
+- Lotus (2014) - [lotus.actingquiet.com](https://lotus.actingquiet.com) / [source code](https://github.com/qoreHQ/actingquiet.com/tree/lotus)
+- Kaizen (2016) - [actingquiet.com](https://actingquiet.com) / [source code](https://github.com/qoreHQ/actingquiet.com/tree/kaizen)
 
 ## Installation
 
