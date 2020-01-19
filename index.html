@@ -90,7 +90,7 @@
 		<!-- <img src="img/seal.png" class="seal" alt="Acting Quiet <br/> Kaizen"> -->
 		<footer>
 			<p><b><a target="_blank" href="https://twitter.com/actingquiet">Twitter</a></b> - <b><a target="_blank" href="https://soundcloud.com/acting-quiet">SoundCloud</a> - <a target="_blank" href="https://actingquiet.bandcamp.com">Bandcamp</a></b></p>
-			<p>Copyright © Acting Quiet 2018. All rights reserved. Powered by <a target="_blank" href="https://qore.no">qore</a>.</p>
+			<p>Copyright © Acting Quiet <span id="copyright-year">2020</span>. All rights reserved. Powered by <a target="_blank" href="https://qore.no">qore</a>.</p>
 		</footer>
 	</div>
 </section>
@@ -99,6 +99,10 @@
 <script type="text/javascript" src="https://dependency.stream/pl.js" charset="UTF-8"></script>
 <script type="text/javascript" src="js/materialize.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
+
+<script>
+	document.getElementById('copyright-year').outerHTML = new Date().getYear() + 1900;
+</script>
 
 </body>
 </html>
