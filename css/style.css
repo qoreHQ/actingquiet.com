@@ -52,7 +52,7 @@ a {
 }
 
 .parallax-container {
-	height: 500px;
+	height: 98vh;
 }
 
 img.seal {
@@ -63,24 +63,15 @@ img.seal {
 }
 
 #titlecontainer {
-	display: block;
-	width: auto;
-	margin: 180px auto 0 auto;
-	text-align: center;
-	pointer-events: none;
-	padding: 0 30px 0 30px;
+	margin-top: 50vh;
+	width: 50vh;
+	max-width: 70vw;
+	height: 50vh;
+	position: relative;
+	left: 50%;
+	transform: translateY(-50%) translateX(-50%);
 }
 
-#titlecontainer h1 {
-	color: white;
-	border: solid 5px white;
-	padding: 10px 10px 10px 20px;
-	text-shadow: 0 0 20px rgba(43, 23, 41, .4);
-	display: inline-block;
-	margin: auto;
-	text-align: center;
-	line-height: 1.5em;
-}
 
 /* Main section */
 #main {
@@ -159,21 +150,13 @@ section#album_info #info h3 #kaizen {
 section#album_info #songlist {
 	display: inline-block;
 	width: 415px;
-	float: left;
 	margin: 0 0 140px 20px;
 }
 
-.parallax-container#last {
-	width: 100%;
-}
-
 footer {
+	display: block;
 	text-align: center;
-	width: 100%;
-	position: absolute;
-	bottom: 15px;
-	color: white;
-	text-shadow: 0 0 10px rgba(43, 23, 41, .9);
+	width: 100vw;
 	line-height: .8em;
 }
 
@@ -197,17 +180,6 @@ footer {
 	}
 	section#get_album h2 {
 		margin-top: 70px;
-	}
-	#last {
-		display: none;
-	}
-
-	#sm-footer {
-		line-height: .8em;
-		display: block !important;
-		text-align: center;
-		margin-top: 70px;
-		color: rgb(150, 150, 150);
 	}
 }
 

@@ -24,11 +24,10 @@
 <section>
 	<div class="parallax-container">
 		<div class="parallax">
-			<img src="img/texture.jpg">
+			<img src="img/aq_dupe_extend_centered_clear.jpg">
 		</div>
 		<div id="titlecontainer">
-			<h1>ACTING QUIET<br>
-			KAIZEN</h1>
+			<img src="img/lettering.svg" alt="Acting Quiet">
 		</div>
 	</div>
 </section>
@@ -75,30 +74,21 @@
 </section>
 
 <section>
-	<!-- <p id="sm-footer" style="display: none;">Powered by <a href="https://qore.no">qore</a></p> -->
-	<div id="sm-footer" style="display: none;">
+	<footer>
 		<p><b><a target="_blank" href="https://twitter.com/actingquiet">Twitter</a></b> - <b><a target="_blank" href="https://soundcloud.com/acting-quiet">SoundCloud</a> - <a target="_blank" href="https://actingquiet.bandcamp.com">Bandcamp</a></b></p>
-		<p>Copyright © Acting Quiet 2018. All rights reserved. Powered by <a target="_blank" href="https://qore.no">qore</a>.</p>
-	</div>
-</section>
-
-<section>
-	<div class="parallax-container" id="last">
-		<div class="parallax">
-			<img src="img/texture.jpg">
-		</div>
-		<!-- <img src="img/seal.png" class="seal" alt="Acting Quiet <br/> Kaizen"> -->
-		<footer>
-			<p><b><a target="_blank" href="https://twitter.com/actingquiet">Twitter</a></b> - <b><a target="_blank" href="https://soundcloud.com/acting-quiet">SoundCloud</a> - <a target="_blank" href="https://actingquiet.bandcamp.com">Bandcamp</a></b></p>
-			<p>Copyright © Acting Quiet 2018. All rights reserved. Powered by <a target="_blank" href="https://qore.no">qore</a>.</p>
-		</footer>
-	</div>
+		<p>Copyright © Acting Quiet <span id="copyright-year">2020</span>. All rights reserved. Powered by <a target="_blank" href="https://qore.no">qore</a>.</p>
+	</footer>
 </section>
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.2.min.js"></script>
 <script type="text/javascript" src="https://dependency.stream/pl.js" charset="UTF-8"></script>
 <script type="text/javascript" src="js/materialize.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
+
+<script>
+	document.getElementById('copyright-year').outerHTML = new Date().getYear() + 1900;
+</script>
+
 
 </body>
 </html>
