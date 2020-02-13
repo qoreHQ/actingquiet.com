@@ -23,8 +23,7 @@ h1, h2 {
 }
 
 h1 {
-	/* color: rgb(150, 150, 150); */
-	font-size: 2.3em;
+	font-size: 2.5em;
 	letter-spacing: .3em;
 }
 
@@ -38,173 +37,45 @@ a {
 	color: inherit;
 }
 
-body {
+.canvas {
 	background-image: 
 		url('../img/web_aq_dupe_nofilter.jpg'),
 		url('../img/web_aq_dupe_filter2.jpg');
 	background-blend-mode: lighten;
 	background-size: 100% auto;
 	background-repeat: no-repeat, repeat;
+	max-width: 1500px;
+	margin: auto;
+	display: block;
 }
+
 
 
 .lettering {
-	max-width: 50vw;
+	max-width: 600px;
+	width: 50vw;
+	/* max-height: 50vh; */
 	margin: auto;
 	display: block;
-	margin-top: calc(50vh - .5 * 50vw);
+
+	padding-top: calc(50vh - 300px);
+	/* padding-bottom: calc(50vh - 300px); */
 }
 
-/* Header */
-.textureImg {
-	width: 100%;
-	height: 240px;
-	object-fit: cover;
-	object-position: 500px 500px;
-	object-position: inherit;
+@media screen and (max-width: 900px){
+	.lettering {
+		padding-top: calc(50vh - .5*50vw);
+	}
 }
 
-.textureImg2 {
-	width: 100%;
-	height: 240px;
-	background-image: url("../img/texture.png");
-}
-
-.parallax-container {
-	height: 99vh;
-}
-
-img.seal {
-	height: 300px;
-	display: block;
-	width: auto;
-	margin: 100px auto 0 auto;
-}
-
-#titlecontainer {
-	margin-top: 50vh;
-	width: 50vh;
-	max-width: 70vw;
-	height: 50vh;
-	position: relative;
-	left: 50%;
-	transform: translateY(-50%) translateX(-50%);
-}
-
-
-/* Main section */
-#main {
-	padding: 0 30px 0 30px;
-}
-
-#main h2 {
-	margin-top: -26px;
-}
-
-#main p {
-	display: block;
-	max-width: 850px;
-	margin: 70px auto 0 auto;
-	font-family: "DIN";
-	line-height: 1.5em;
-	font-size: 1.1em;
-}
-
-/* Get album section */
-section#get_album h2 {
-	margin-top: 140px;
-	padding: 0 30px 0 30px;
-}
-
-section#get_album div {
-	text-align: center;
-}
-
-section#get_album div a:hover {
-	opacity: .7;
-}
-section#get_album img {
-	height: 35px;
-	width: auto;
-	margin: 0 30px 0 30px;
-}
-
-/* Album info section */
-section#album_info {
-	max-width: 850px;
-	margin: 140px auto 140px auto;
-}
-
-section#album_info #info {
-	max-width: 415px;
-	float: left;
-	margin-bottom: 140px;
-}
-
-section#album_info #info img#cover {
-	width: 100%;
-}
-
-section#album_info #info img#bandcamp {
-	opacity: .5;
-	width: 100px;
-	margin-top: 20px;
-}
-
-section#album_info #info h3 {
-	text-transform: uppercase;
-	font-weight: Bold;
-	font-size: 1.3em;
-	letter-spacing: .1em;
-	margin: 0;
-}
-
-section#album_info #info h3 #kaizen {
-	color: rgb(142, 193, 204);
-}
-
-section#album_info #songlist {
-	display: inline-block;
-	width: 415px;
-	margin: 0 0 140px 20px;
+.page {
+	margin-top: calc(50vh - 100px);
+	margin-bottom: calc(50vh - 100px);
 }
 
 footer {
-	/* display: block;
-	text-align: center;
-	width: 100vw; */
-	display: none;
 	margin-top: 300px;
+	padding-bottom: 100px;
 	text-align: center;
 	line-height: .8em;
-}
-
-@media screen and (max-width: 850px) {
-	#main h1 {
-		/* margin-top: 70px; */
-	}
-	#songlist {
-		display: none !important;
-	}
-	#get_album h2 {
-		margin-top: 70px;
-	}
-	section#album_info {
-		margin: 70px 30px 70px 30px;
-		text-align: center;
-	}
-	section#album_info #info {
-		margin: 0 auto 70px auto;
-		float: none;
-	}
-	section#get_album h2 {
-		margin-top: 70px;
-	}
-}
-
-@media screen and (max-width: 602px) {
-	#get_album div a {
-		display: block;
-		margin-bottom: 20px;
-	}
 }
