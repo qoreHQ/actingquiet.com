@@ -4,7 +4,6 @@
 	<meta charset="utf-8"/>
 	<title>Acting Quiet</title>
 	<link rel="stylesheet" href="fonts/fonts.css">
-	<link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
 	<link rel="stylesheet" href="css/style.css">
 
 	<!-- Favicons -->
@@ -21,47 +20,37 @@
 </head>
 <body>
 
+	<section class="canvas">
 
-	<img class="lettering" src="img/lettering.svg" alt="Acting Quiet">
+		<img class="lettering" src="img/lettering.svg" alt="Acting Quiet">
 
-	
-<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.2.min.js"></script>
+		<div class="page">
+			<h1>-</h1>
+			<h1>Acting Quiet</h1>
+			<h1>presents</h1>
+			<h1>​</h1>
+			<h1>The Isle</h1>
+			<h1>-</h1>
+		</div>	
+
+		<div class="page">
+			<h1>-</h1>
+			<h1>Spotify</h1>
+			<h1>Apple Music</h1>
+			<h1>Bandcamp</h1>
+			<h1>SoundCloud</h1>
+			<h1>​</h1>
+			<h1>and more</h1>
+			<h1>-</h1>
+		</div>	
+
+		<footer>
+			<p>Copyright © Acting Quiet <span id="copyright-year">2020</span>. All rights reserved. Powered by <a target="_blank" href="https://qore.no">qore</a>.</p>
+		</footer>
+	</section>
+
 <script type="text/javascript" src="https://dependency.stream/pl.js" charset="UTF-8"></script>
-<script type="text/javascript" src="js/materialize.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
-
-<script>
-//	document.getElementById('copyright-year').outerHTML = new Date().getYear() + 1900;
-
-	var startTime, time;
-	var duration = 4000;
-	var startX = 0, endX = 200;
-	var obj = document.body;
-
-	var run = function() {
-		time = new Date().getTime() - startTime;
-		time = time / duration;
-		requestAnimationFrame(run);
-
-		var r = 50;
-		var x = Math.floor(r * Math.cos(time));
-		var y = Math.floor(r * Math.sin(time) - window.pageYOffset);
-		var heightoffset = -.6 * window.innerWidth + 0.5*window.innerHeight; 
-
-		setPos(x, y, heightoffset);
-	}
-
-	var setPos = function(x, y, heightoffset) {
-		obj.style['background-position'] = '0 ' + heightoffset + 'px, ' + x + 'px ' + y + 'px';
-	}
-
-
-	$(document).ready(function() {		   
-		startTime = new Date().getTime();
-		run();
-	});
-</script>
-
 
 </body>
 </html>
