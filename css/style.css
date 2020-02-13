@@ -38,6 +38,23 @@ a {
 	color: inherit;
 }
 
+body {
+	background-image: 
+		url('../img/web_aq_dupe_nofilter.jpg'),
+		url('../img/web_aq_dupe_filter2.jpg');
+	background-blend-mode: lighten;
+	background-size: 100% auto;
+	background-repeat: no-repeat, repeat;
+}
+
+
+.lettering {
+	max-width: 50vw;
+	margin: auto;
+	display: block;
+	margin-top: calc(50vh - .5 * 50vw);
+}
+
 /* Header */
 .textureImg {
 	width: 100%;

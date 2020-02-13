@@ -21,38 +21,45 @@
 </head>
 <body>
 
-<section>
-	<div class="parallax-container">
-		<div class="parallax">
-			<img src="img/aq_dupe_extend_centered_clear.jpg">
-		</div>
-		<div id="titlecontainer">
-			<img src="img/lettering.svg" alt="Acting Quiet">
-		</div>
-	</div>
-</section>
 
-<section id="main">
+	<img class="lettering" src="img/lettering.svg" alt="Acting Quiet">
 
-	<h1>14.02.20</h1>
-
-</section>
-
-
-<section>
-	<footer>
-		<p><b><a target="_blank" href="https://twitter.com/actingquiet">Twitter</a></b> - <b><a target="_blank" href="https://soundcloud.com/acting-quiet">SoundCloud</a> - <a target="_blank" href="https://actingquiet.bandcamp.com">Bandcamp</a></b></p>
-		<p>Copyright © Acting Quiet <span id="copyright-year">2020</span>. All rights reserved. Powered by <a target="_blank" href="https://qore.no">qore</a>.</p>
-	</footer>
-</section>
-
+	
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.2.min.js"></script>
 <script type="text/javascript" src="https://dependency.stream/pl.js" charset="UTF-8"></script>
 <script type="text/javascript" src="js/materialize.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
 
 <script>
-	document.getElementById('copyright-year').outerHTML = new Date().getYear() + 1900;
+//	document.getElementById('copyright-year').outerHTML = new Date().getYear() + 1900;
+
+	var startTime, time;
+	var duration = 4000;
+	var startX = 0, endX = 200;
+	var obj = document.body;
+
+	var run = function() {
+		time = new Date().getTime() - startTime;
+		time = time / duration;
+		requestAnimationFrame(run);
+
+		var r = 50;
+		var x = Math.floor(r * Math.cos(time));
+		var y = Math.floor(r * Math.sin(time) - window.pageYOffset);
+		var heightoffset = -.6 * window.innerWidth + 0.5*window.innerHeight; 
+
+		setPos(x, y, heightoffset);
+	}
+
+	var setPos = function(x, y, heightoffset) {
+		obj.style['background-position'] = '0 ' + heightoffset + 'px, ' + x + 'px ' + y + 'px';
+	}
+
+
+	$(document).ready(function() {		   
+		startTime = new Date().getTime();
+		run();
+	});
 </script>
 
 
