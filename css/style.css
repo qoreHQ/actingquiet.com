@@ -13,6 +13,13 @@ body {
 	margin: 0;
 	padding: 0;
 	width: 100%;
+	/* background-image: url('../img/web_aq_dupe_filter2.jpg'); */
+	/* background-blend-mode: lighten; */
+	background-size: 100% auto;
+	background-repeat: repeat;
+	max-width: 1500px;
+	margin: auto;
+	display: block;
 	background-color: black;
 }
 
@@ -27,6 +34,21 @@ h1 {
 	letter-spacing: .3em;
 }
 
+h1 span {
+	background-color: black;
+	padding: 10px;
+}
+
+@media screen and (max-width: 568px){
+	h1 {
+		font-size: 1.5em;
+		letter-spacing: .3em;
+	}
+	footer {
+		font-size: .7em;
+	}
+}
+
 h2 {
 	color: rgb(142, 193, 204);
 	font-size: 1.3em;
@@ -35,31 +57,42 @@ h2 {
 
 a {
 	color: inherit;
+	transition: all 0.25s ease-in-out;
+	text-decoration: none;
+}
+
+h1 a:hover {
+	font-size: 1.2em;
 }
 
 .canvas {
 	background-image: 
-		url('../img/web_aq_dupe_nofilter.jpg'),
+		url('../img/web_aq_dupe_transparent.png'),
 		url('../img/web_aq_dupe_filter2.jpg');
-	background-blend-mode: lighten;
+	/* background-blend-mode: lighten; */
 	background-size: 100% auto;
 	background-repeat: no-repeat, repeat;
 	max-width: 1500px;
 	margin: auto;
 	display: block;
+	z-index: -2;
 }
-
-
 
 .lettering {
 	max-width: 600px;
 	width: 50vw;
-	/* max-height: 50vh; */
 	margin: auto;
 	display: block;
-
 	padding-top: calc(50vh - 300px);
 	/* padding-bottom: calc(50vh - 300px); */
+}
+
+.lettering img {
+	transition: all .25s ease-in-out;
+}
+
+.lettering img:hover {
+	transform: scale(1.05);
 }
 
 @media screen and (max-width: 900px){
@@ -74,8 +107,8 @@ a {
 }
 
 footer {
-	margin-top: 300px;
-	padding-bottom: 100px;
+	margin: 300px 10% 0 10%;
+	padding-bottom: 70px;
 	text-align: center;
 	line-height: .8em;
 }
