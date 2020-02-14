@@ -36,7 +36,7 @@ h1 {
 
 h1 span {
 	background-color: black;
-	padding: 10px;
+	padding: .25em;
 }
 
 @media screen and (max-width: 568px){
