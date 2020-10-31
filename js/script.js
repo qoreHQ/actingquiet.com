@@ -1,22 +1,22 @@
 document.getElementById("copyright-year").outerHTML =
   new Date().getYear() + 1900;
 
-var startTime, time;
-var duration = 4000;
-var startX = 0,
+let startTime, time;
+let duration = 4000;
+let startX = 0,
   endX = 200;
-var obj = document.getElementsByClassName("canvas")[0];
-var lettering = document.getElementsByClassName("lettering")[0];
-var heightoffset = 0;
+let obj = document.getElementsByClassName("canvas")[0];
+let lettering = document.getElementsByClassName("lettering")[0];
+let heightoffset = 0;
 
-var run = function() {
+let run = function() {
   time = new Date().getTime() - startTime;
   time = time / duration;
 
-  var r = 50;
-  var x = 0;
-  var scrollpos = window.pageYOffset;
-  var y = 50 * time - scrollpos;
+  let r = 50;
+  let x = 0;
+  let scrollpos = window.pageYOffset;
+  let y = 50 * time - scrollpos;
   heightoffset =
     0.5 * window.innerHeight - 0.5 * obj.clientWidth + 0.8 * scrollpos;
 
