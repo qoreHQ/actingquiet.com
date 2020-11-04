@@ -1,38 +1,38 @@
+// Set copyright notice year
 document.getElementById("copyright-year").outerHTML =
   new Date().getYear() + 1900;
 
+// Page animatioon
+const speed = 0.025;
+
 let startTime, time;
-let duration = 4000;
-let startX = 0,
-  endX = 200;
-let obj = document.getElementsByClassName("canvas")[0];
-let lettering = document.getElementsByClassName("lettering")[0];
 let heightoffset = 0;
 
-let run = function() {
+// Size variables
+const obj = document.getElementsByClassName("canvas")[0];
+let objWidth = obj.clientWidth;
+let { pageYOffset, innerHeight } = window;
+window.addEventListener("scroll", () => {
+  pageYOffset = window.pageYOffset;
+});
+window.addEventListener("resize", () => {
+  innerHeight = window.innerHeight;
+  objWidth = obj.clientWidth;
+});
+
+function run() {
+  // Time elapsed since pageload
   time = new Date().getTime() - startTime;
-  time = time / duration;
 
-  let r = 50;
-  let x = 0;
-  let scrollpos = window.pageYOffset;
-  let y = 50 * time - scrollpos;
-  heightoffset =
-    0.5 * window.innerHeight - 0.5 * obj.clientWidth + 0.8 * scrollpos;
+  const y = time * speed - pageYOffset;
+  heightoffset = 0.5 * innerHeight - 0.5 * objWidth + 0.8 * pageYOffset;
 
+  obj.style["background-position"] = "0 " + heightoffset + "px, 0 " + y + "px";
+
+  // Loop at next animation frame
   requestAnimationFrame(run);
-  setPos(x, y, heightoffset);
-};
-
-var setPos = function(x, y, heightoffset) {
-  obj.style["background-position"] =
-    "0 " + heightoffset + "px, " + x + "px " + y + "px";
-};
+}
 
 startTime = new Date().getTime();
 
 run();
-
-// setInterval(() => {
-//   run();
-// }, 1);
