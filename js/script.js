@@ -4,35 +4,35 @@ document.getElementById("copyright-year").outerHTML =
 
 // Page animatioon
 const speed = 0.025;
-
-let startTime, time;
-let heightoffset = 0;
+const startTime = new Date().getTime();
 
 // Size variables
 const obj = document.getElementsByClassName("canvas")[0];
-let objWidth = obj.clientWidth;
+let { clientWidth } = obj;
 let { pageYOffset, innerHeight } = window;
+
 window.addEventListener("scroll", () => {
   pageYOffset = window.pageYOffset;
 });
 window.addEventListener("resize", () => {
   innerHeight = window.innerHeight;
-  objWidth = obj.clientWidth;
+  clientWidth = obj.clientWidth;
 });
 
 function run() {
   // Time elapsed since pageload
-  time = new Date().getTime() - startTime;
+  const time = new Date().getTime() - startTime;
 
+  // Y position of background image
   const y = time * speed - pageYOffset;
-  heightoffset = 0.5 * innerHeight - 0.5 * objWidth + 0.8 * pageYOffset;
+
+  const heightoffset =
+    0.5 * innerHeight - 0.5 * clientWidth + 0.8 * pageYOffset;
 
   obj.style["background-position"] = "0 " + heightoffset + "px, 0 " + y + "px";
 
   // Loop at next animation frame
   requestAnimationFrame(run);
 }
-
-startTime = new Date().getTime();
 
 run();
