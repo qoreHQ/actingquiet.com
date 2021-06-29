@@ -183,7 +183,7 @@ img.topimg {
     -moz-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     -o-transform: rotate(360deg);
-    tramsform: rotate(360deg);
+    transform: rotate(360deg);
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
     -ms-transition: all 0.5s;
@@ -232,7 +232,7 @@ img.topimg {
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   -o-transform: rotate(45deg);
-  tramsform: rotate(45deg);
+  trabsform: rotate(45deg);
   -webkit-border-radius: 0 0 0 4px;
   -khtml-border-radius: 0 0 0 4px;
   -moz-border-radius: 0 0 0 4px;
@@ -438,7 +438,7 @@ p#header {
     -moz-transform: rotate(7deg);
     -ms-transform: rotate(7deg);
     -o-transform: rotate(7deg);
-    tramsform: rotate(7deg); }
+    transform: rotate(7deg); }
 
 .movie {
   margin-top: 15px; }
